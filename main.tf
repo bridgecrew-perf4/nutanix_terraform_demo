@@ -2,8 +2,9 @@ terraform {
   required_version = ">= 0.13"
   required_providers {
     nutanix = {
-      source  = "terraform-providers/nutanix"
-      version = "~> 1.1"
+      //source  = "terraform-providers/nutanix"
+      source  = "nutanix/nutanix"
+      version = "~> 1.1.1"
     }
   }
 }
