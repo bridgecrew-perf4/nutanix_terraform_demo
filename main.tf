@@ -2,11 +2,22 @@ terraform {
   required_version = ">= 0.13"
   required_providers {
     nutanix = {
-      source  = "terraform-providers/nutanix"
-      version = "~> 1.1"
+      //source  = "terraform-providers/nutanix"
+      source  = "nutanix/nutanix"
+      version = "~> 1.1.1"
     }
   }
 }
+
+/*
+provider "nutanix" {
+  username = "xxxxxx"
+  password = "xxxxxxxxxxxx"
+  endpoint = "xxx.xxx.xxx.xxx"
+  insecure = true
+  port     = 9440
+}
+*/
 
 data "nutanix_clusters" "clusters" {}
 
