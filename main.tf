@@ -8,6 +8,16 @@ terraform {
   }
 }
 
+/*
+provider "nutanix" {
+  username = "xxxxxx"
+  password = "xxxxxxxxxxxx"
+  endpoint = "xxx.xxx.xxx.xxx"
+  insecure = true
+  port     = 9440
+}
+*/
+
 data "nutanix_clusters" "clusters" {}
 
 data "nutanix_cluster" "sglab-devops-cluster" {
