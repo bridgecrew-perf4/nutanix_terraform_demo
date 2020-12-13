@@ -17,3 +17,7 @@ variable "subnet_name" {
 variable "image_name" {
   default = "CentOS-7-x86_64-GenericCloud"
 }
+
+variable "s3-backend-bucket" {
+  default = "devops-nutanix-terraform-state"
+}
