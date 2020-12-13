@@ -19,9 +19,13 @@ provider "nutanix" {
 }
 ```
 
-* Fill in variables in terraform.tfvars
+* Fill in default values in variables.tf
 
 ```
+terrafoorm init
+
 terraform plan -out plan-20201212
 terraform apply plan-20201212
+
+terraform destroy
 ```

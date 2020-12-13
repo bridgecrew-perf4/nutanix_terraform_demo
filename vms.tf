@@ -1,7 +1,7 @@
 resource "nutanix_virtual_machine" "testvm" {
   name = var.vmname
   //cluster_uuid       = data.nutanix_clusters.clusters.entities.0.metadata.uuid
-  cluster_uuid         = data.nutanix_cluster.devops-cluster.cluster_id
+  cluster_uuid         = data.nutanix_cluster.myCluster.id
   num_vcpus_per_socket = 2
   num_sockets          = 1
   memory_size_mib      = 1024
@@ -9,7 +9,7 @@ resource "nutanix_virtual_machine" "testvm" {
   disk_list {
     data_source_reference = {
       kind = "image"
-      uuid = data.nutanix_image.CentOS-7.image_id
+      uuid = data.nutanix_image.myImage.id
     }
 
     device_properties {
@@ -20,28 +20,31 @@ resource "nutanix_virtual_machine" "testvm" {
 
       device_type = "DISK"
     }
-
+    /*
     storage_config {
       storage_container_reference {
         kind = "storage_container"
         uuid = var.container_uuid
       }
     }
+    */
   }
 
   disk_list {
-    disk_size_mib = 100000
+    disk_size_mib = 100 * 1024
 
+    /*
     storage_config {
       storage_container_reference {
         kind = "storage_container"
         uuid = var.container_uuid
       }
     }
+    */
   }
 
   nic_list {
-    subnet_uuid = data.nutanix_subnet.IPAM-44.subnet_id
+    subnet_uuid = data.nutanix_subnet.mySubnet.id
   }
 }
 

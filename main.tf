@@ -19,15 +19,3 @@ provider "nutanix" {
 }
 */
 
-data "nutanix_clusters" "clusters" {}
-data "nutanix_cluster" "devops-cluster" {
-  cluster_id = var.cluster_uuid
-}
-
-data "nutanix_subnet" "IPAM-44" {
-  subnet_id = var.subnet_uuid
-}
-
-data "nutanix_image" "CentOS-7" {
-  image_id = var.centos_image_uuid
-}
