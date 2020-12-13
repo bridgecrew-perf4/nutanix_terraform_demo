@@ -4,5 +4,5 @@
 .DS_Store
 terraform.tfstate
 terraform.tfstate.backup
-nutanix_provider.tf
+provider.tf
 crash.log
