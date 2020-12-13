@@ -5,7 +5,9 @@
 
 i.e. ```terraform import nutanix_subnet.IPAM-44 4fde9fb6-f75f-44a5-b17e-be77c001b65e```
 
-### nutanix_provider.tf:
+### Usage:
+
+* Prepare provider.tf
 
 ```
 provider "nutanix" {
@@ -15,4 +17,15 @@ provider "nutanix" {
   insecure = true
   port     = 9440
 }
+```
+
+* Fill in default values in variables.tf
+
+```
+terrafoorm init
+
+terraform plan -out plan-20201212
+terraform apply plan-20201212
+
+terraform destroy
 ```
