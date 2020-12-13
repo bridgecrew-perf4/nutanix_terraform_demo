@@ -1,13 +1,11 @@
 
 ## Demo Code of using Terraform Nutanix Provider
 
-### Import existing VLAN: 
-
-i.e. ```terraform import nutanix_subnet.IPAM-44 4fde9fb6-f75f-44a5-b17e-be77c001b65e```
+Create a CentOS7 Virtual Machine terraform (use CentOS7 Cloud image)
 
 ### Usage:
 
-### Prepare provider.tf
+#### Prepare provider.tf
 
 ```
 provider "nutanix" {
@@ -18,7 +16,7 @@ provider "nutanix" {
   port     = 9440
 }
 ```
-### Prepare cloud-init template
+#### Prepare cloud-init template
 
 ./template/cloud-init.tpl
 ```
@@ -41,7 +39,7 @@ disable_root: false
 ssh_pwauth:   true
 ```
 
-### Fill in default values in variables.tf
+#### Fill in default values in variables.tf
 
 ### Deploy
 ```
