@@ -8,7 +8,8 @@ terraform {
   }
 }
 
-/*
+/* uncomment annd fill values
+/* 
 provider "nutanix" {
   username = "xxxxxx"
   password = "xxxxxxxxxxxx"

@@ -1,7 +1,6 @@
 resource "nutanix_virtual_machine" "testvm" {
   name = var.vmname
   //cluster_uuid       = data.nutanix_clusters.clusters.entities.0.metadata.uuid
-  //cluster_uuid         = var.cluster_uuid
   cluster_uuid         = data.nutanix_cluster.devops-cluster.cluster_id
   num_vcpus_per_socket = 2
   num_sockets          = 1
