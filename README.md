@@ -3,7 +3,7 @@
 
 Create a CentOS7 Virtual Machine terraform (use CentOS7 Cloud image)
 
-### Usage:
+### Usage
 
 #### Prepare provider.tf
 
@@ -14,6 +14,18 @@ provider "nutanix" {
   endpoint = "xxx.xxx.xxx.xxx"
   insecure = true
   port     = 9440
+}
+
+provider "aws" {
+  region     = "us-east-1"
+  profile    = "xxxxxx"
+  access_key = "xxxxxxxxxxx"
+  secret_key = "xxxxxxxxxxxxxxxxxxxxx"
+  /*
+  endpoints  {
+    s3      = "http://xxx.xxx.xxx.xxx"
+  }
+  */
 }
 ```
 #### Prepare cloud-init template
@@ -26,14 +38,14 @@ mounts:
   - [swap, null]
 #cloud-config
 users:
-  - name: automatin
+  - name: automation
     sudo: ALL=(ALL) NOPASSWD:ALL
     ssh-authorized-keys:
       - ssh-rsa {your public key}
 chpasswd:
   list: |
     root:xxxxxxxx
-    automatin:xxxxxxxx
+    automation:xxxxxxxx
   expire: False
 disable_root: false
 ssh_pwauth:   true

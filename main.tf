@@ -6,16 +6,11 @@ terraform {
       version = "~> 1.1.1"
     }
   }
+  backend "s3" {
+    # Replace this with your bucket name!
+    bucket         = "devops-nutanix-terraform-state"
+    key            = "devops/s3/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+  }
 }
-
-/* uncomment annd fill values
-/* 
-provider "nutanix" {
-  username = "xxxxxx"
-  password = "xxxxxxxxxxxx"
-  endpoint = "xxx.xxx.xxx.xxx"
-  insecure = true
-  port     = 9440
-}
-*/
-

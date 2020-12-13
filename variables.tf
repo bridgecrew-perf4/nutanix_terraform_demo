@@ -3,7 +3,7 @@
 //variable prism_central_endpoint {}
 
 variable "vmname" {
-  default = "myTestVM"  
+  default = "myTestVM"
 }
 
 variable "cluster_name" {
@@ -16,4 +16,8 @@ variable "subnet_name" {
 
 variable "image_name" {
   default = "CentOS-7-x86_64-GenericCloud"
+}
+
+variable "s3-backend-bucket" {
+  default = "devops-nutanix-terraform-state"
 }

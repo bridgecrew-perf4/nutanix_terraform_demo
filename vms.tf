@@ -32,25 +32,16 @@ resource "nutanix_virtual_machine" "testvm" {
 
   disk_list {
     disk_size_mib = 100 * 1024
+  }
 
-    /*
-    storage_config {
-      storage_container_reference {
-        kind = "storage_container"
-        uuid = var.container_uuid
-      }
-    }
-    */
+  disk_list {
+    disk_size_mib = 50 * 1024
   }
 
   nic_list {
     subnet_uuid = data.nutanix_subnet.mySubnet.id
   }
-
-  //guest_customization_cloud_init_user_data = "${data.template_file.cloud-init.rendered}"
-  //guest_customization_cloud_init_user_data = "base64encode(data.template_file.cloud-init.rendered)"
   guest_customization_cloud_init_user_data = base64encode(data.template_file.cloud-init.rendered)
-
 }
 
 # Show IP address
