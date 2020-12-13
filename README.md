@@ -1,5 +1,5 @@
 
-# Demo Code of using Trrraform Nutanix Provider
+## Demo Code of using Trrraform Nutanix Provider
 
 ### Import existing VLAN: 
 
@@ -7,7 +7,7 @@ i.e. ```terraform import nutanix_subnet.IPAM-44 4fde9fb6-f75f-44a5-b17e-be77c001
 
 ### Usage:
 
-* Prepare provider.tf
+### Prepare provider.tf
 
 ```
 provider "nutanix" {
@@ -18,14 +18,37 @@ provider "nutanix" {
   port     = 9440
 }
 ```
+### Prepare cloud-init tenplate
 
-* Fill in default values in variables.tf
+./template/cloud-init.tpl
+```
+#cloud-config
+# avoid configuring swap using mounts
+mounts:
+  - [swap, null]
+#cloud-config
+users:
+  - name: automatin
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    ssh-authorized-keys:
+      - ssh-rsa {your public key}
+chpasswd:
+  list: |
+    root:xxxxxxxx
+    automatin:xxxxxxxx
+  expire: False
+disable_root: false
+ssh_pwauth:   true
+```
 
+### Fill in default values in variables.tf
+
+### Deploy
 ```
 terrafoorm init
 
-terraform plan -out plan-20201212
-terraform apply plan-20201212
+terraform plan -out plan-xxxxx
+terraform apply plan-xxxx
 
 terraform destroy
 ```
