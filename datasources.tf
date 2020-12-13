@@ -11,3 +11,8 @@ data "nutanix_subnet" "mySubnet" {
 data "nutanix_image" "myImage" {
   image_name = var.image_name
 }
+
+data "template_file" "cloud-init" {
+  //base64_encode = true
+  template = file("./template/cloud-init.tpl")
+}
