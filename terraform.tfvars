@@ -1,6 +1,5 @@
 cluster_uuid      = "0005ae65-4f5c-0343-0632-c0c28edc611e"
 subnet_uuid       = "4fde9fb6-f75f-44a5-b17e-be77c001b65e"
-subnet_name       = "IPAM-10.129.44.0/24"
 container_uuid    = "c88ad2db-b523-49f0-ae50-32db209c4df3"
 centos_image_uuid = "0e38287b-9bfb-46e2-91c2-63283bfaff17"
 vmname            = "mytestvm1"
