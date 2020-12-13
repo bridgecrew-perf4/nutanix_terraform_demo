@@ -3,7 +3,7 @@
 //variable prism_central_endpoint {}
 
 variable "vmname" {
-  default = "myTestVM"  
+  default = "myTestVM"
 }
 
 variable "cluster_name" {

@@ -3,7 +3,7 @@
 
 Create a CentOS7 Virtual Machine terraform (use CentOS7 Cloud image)
 
-### Usage:
+### Usage
 
 #### Prepare provider.tf
 
@@ -26,14 +26,14 @@ mounts:
   - [swap, null]
 #cloud-config
 users:
-  - name: automatin
+  - name: automation
     sudo: ALL=(ALL) NOPASSWD:ALL
     ssh-authorized-keys:
       - ssh-rsa {your public key}
 chpasswd:
   list: |
     root:xxxxxxxx
-    automatin:xxxxxxxx
+    automation:xxxxxxxx
   expire: False
 disable_root: false
 ssh_pwauth:   true

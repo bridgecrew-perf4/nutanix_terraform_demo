@@ -46,11 +46,7 @@ resource "nutanix_virtual_machine" "testvm" {
   nic_list {
     subnet_uuid = data.nutanix_subnet.mySubnet.id
   }
-
-  //guest_customization_cloud_init_user_data = "${data.template_file.cloud-init.rendered}"
-  //guest_customization_cloud_init_user_data = "base64encode(data.template_file.cloud-init.rendered)"
   guest_customization_cloud_init_user_data = base64encode(data.template_file.cloud-init.rendered)
-
 }
 
 # Show IP address
