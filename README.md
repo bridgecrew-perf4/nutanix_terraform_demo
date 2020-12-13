@@ -3,6 +3,19 @@
 
 Create a CentOS7 Virtual Machine terraform (use CentOS7 Cloud image)
 
+### File list
+```
+.
+|-- datasources.tf
+|-- main.tf
+|-- provider.tf
+|-- README.md
+|-- template
+|   `-- cloud-init.tpl
+|-- variables.tf
+`-- vms.tf
+```
+
 ### Usage
 
 #### Prepare provider.tf

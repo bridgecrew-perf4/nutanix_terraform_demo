@@ -11,7 +11,7 @@ variable "cluster_name" {
 }
 
 variable "subnet_name" {
-  default = "IPAM-10.129.44.0/24"
+  default = "vlan123"
 }
 
 variable "image_name" {
