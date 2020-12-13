@@ -18,7 +18,7 @@ provider "nutanix" {
   port     = 9440
 }
 ```
-### Prepare cloud-init tenplate
+### Prepare cloud-init template
 
 ./template/cloud-init.tpl
 ```
