@@ -7,7 +7,7 @@ variable "vmname" {
 }
 
 variable "cluster_name" {
-  default = "DevOps-AOS5.17.1-auto_cluster_nested_5f50aeca82e14f9bf989ad2b"
+  default = "mycluster"
 }
 
 variable "subnet_name" {
