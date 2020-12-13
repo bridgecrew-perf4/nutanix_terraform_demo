@@ -1,5 +1,5 @@
 
-## Demo Code of using Trrraform Nutanix Provider
+## Demo Code of using Terraform Nutanix Provider
 
 ### Import existing VLAN: 
 
