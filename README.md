@@ -15,6 +15,18 @@ provider "nutanix" {
   insecure = true
   port     = 9440
 }
+
+provider "aws" {
+  region     = "us-east-1"
+  profile    = "xxxxxx"
+  access_key = "xxxxxxxxxxx"
+  secret_key = "xxxxxxxxxxxxxxxxxxxxx"
+  /*
+  endpoints  {
+    s3      = "http://xxx.xxx.xxx.xxx"
+  }
+  */
+}
 ```
 #### Prepare cloud-init template
 
