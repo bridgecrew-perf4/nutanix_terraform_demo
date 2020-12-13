@@ -21,7 +21,6 @@ provider "nutanix" {
 
 data "nutanix_clusters" "clusters" {}
 
-
 data "nutanix_subnet" "IPAM-44" {
   subnet_name = var.subnet_name
   //subnet_name = "IPAM-10.129.44.0/24"
@@ -30,5 +29,5 @@ data "nutanix_subnet" "IPAM-44" {
 
 data "nutanix_image" "CentOS-7" {
   image_name = "CentOS-7-x86_64-GenericCloud"
-  //image_id = nutanix_image.CentOS-7-x86_64-GenericCloud.id
+  //image_id = nutanix_image.CentOS-7.id
 }
