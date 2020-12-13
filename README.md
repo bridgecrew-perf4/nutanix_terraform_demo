@@ -21,4 +21,7 @@ provider "nutanix" {
 
 * Fill in variables in terraform.tfvars
 
-
+```
+terraform plan -out plan-20201212
+terraform apply plan-20201212
+```
